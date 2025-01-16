@@ -30,8 +30,8 @@ body {
 }
 
 .lhs-wrapper {
-    flex: 1 1 34%;
-    min-width: 400px;
+    flex: 1 1 400px;
+    max-width: 640px;
     background-color: rgb(206, 215, 224);
     background-image: url(./img/ocean.jpg);
     background-origin: border-box;
@@ -39,26 +39,20 @@ body {
     background-repeat: no-repeat;
 }
 
-@media only screen and (min-width: 1200px) {
-    .lhs-wrapper {
-        max-width: 640px;
-    }
-}
-
 .logo-wrapper {
-    height: 8rem;
-    margin-top: 16rem;
+    margin-top: 35vh;
     background-color: rgba(0, 0, 0, 0.362);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4%;
+    flex-wrap: wrap;
+    padding: .5rem;
 }
 
 img {
     display: block;
-    max-width: 100%;
-    height: 100%;
+    height: 8rem;
     object-fit: cover;
 }
 
@@ -66,11 +60,11 @@ img {
     color: #fff;
     font-family: "mulilight", system-ui, sans-serif;
     font-weight: normal;
+    text-align: center;
 }
 
 main {
-    flex: 1 1 66%;
-    min-width: 720px;
+    flex: 1 1 720px;
     /* background-color: rgb(227, 232, 237); */
 }
 
