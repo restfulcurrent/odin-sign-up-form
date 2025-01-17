@@ -31,7 +31,6 @@ body {
 
 .lhs-wrapper {
     flex: 0 1 min(48rem, 35%);
-    /* max-width: 640px; */
     background-color: rgb(206, 215, 224);
     background-image: url(./img/ocean.jpg);
     background-origin: border-box;
@@ -48,14 +47,12 @@ body {
     flex-wrap: wrap;
     padding: 1.5rem;
     column-gap: 5%;
-    /* row-gap: 1.5rem; */
     row-gap: clamp(1rem, .5rem + 1.5vh, 1.5rem);
     font-size: clamp(2rem, 1.5rem + 1.5vmax, 3rem);
 }
 
 img {
     display: block;
-    /* height: 8rem; */
     height: clamp(5rem, 3.75rem + 3.75vmax, 8rem);
     object-fit: cover;
 }
@@ -68,8 +65,59 @@ img {
     font-size: inherit;
 }
 
-main {
+.rhs-wrapper {
     flex: 1;
+    background-color: #f7f7f7;
+}
+
+.heading,
+.sign-up-card,
+.button-wrapper,
+.login-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(100%, 100ch);
+    padding-right: 6ch;
+    padding-left: 6ch;
+}
+
+.heading {
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+}
+
+.sign-up-wrapper {
+    background-color: #ffffff;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-wrapper > * {
+    flex: 1 1 50%;
+}
+
+label {
+    display: block;
+}
+
+.sign-up-card h3 {
+    margin-bottom: 1rem;
+}
+
+.sign-up-wrapper {
+    padding: 1.5rem 0;
+}
+
+.sign-up-wrapper,
+.button-wrapper {
+    margin-bottom: 2rem;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* input, button, textarea, select {
