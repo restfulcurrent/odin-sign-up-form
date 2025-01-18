@@ -39,7 +39,7 @@ body {
 }
 
 .logo-wrapper {
-    margin-top: 35vh;
+    margin-top: 35vmin;
     background-color: rgba(0, 0, 0, 0.362);
     display: flex;
     justify-content: center;
@@ -82,7 +82,7 @@ img {
 }
 
 .heading {
-    margin-top: 16vh;
+    margin-top: 16vmin;
     margin-bottom: 3rem;
 }
 
@@ -90,14 +90,10 @@ img {
     margin-bottom: 1.5rem;
 }
 
-.sign-up-wrapper {
-    background-color: #ffffff;
-}
-
 .input-wrapper {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 6rem;
+    column-gap: 12%;
     row-gap: 1.2rem;
     width: min(100%, 100ch);
 }
@@ -115,12 +111,13 @@ label {
 }
 
 .sign-up-wrapper {
-    padding: 1.5rem 0;
+    background-color: #ffffff;
+    padding: 1.5rem 0 2.5rem;
     margin-bottom: 2rem;
     width: min(100%, 100ch);
     margin-left: auto;
     margin-right: auto;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -138,6 +135,7 @@ input {
     border-radius: .25rem;
     width: 100%;
     height: 2.5rem;
+    padding: 0.5rem;
 }
 
 button {
