@@ -45,7 +45,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     column-gap: 5%;
     row-gap: clamp(1rem, .5rem + 1.5vh, 1.5rem);
     font-size: clamp(2rem, 1.5rem + 1.5vmax, 3rem);
@@ -106,7 +106,8 @@ label {
     display: block;
 }
 
-.sign-up-card h3 {
+.sign-up-card h3 + p{
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -128,6 +129,7 @@ form {
 input, button {
     font-family: inherit;
     font-size: 100%;
+    appearance: none;
 }
 
 input {
@@ -136,6 +138,7 @@ input {
     width: 100%;
     height: 2.5rem;
     padding: 0.5rem;
+    outline: none;
 }
 
 button {
@@ -165,4 +168,14 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+input:user-invalid {
+    color: red;
+    /* border: 1px solid red; */
+}
+
+input:focus {
+    color: unset;
+    border: 1px solid #676767;
 }
