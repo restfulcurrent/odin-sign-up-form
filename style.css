@@ -5,16 +5,13 @@
          url('fonts/muli-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
 
 *::before,
 *,
 *::after {
     box-sizing: border-box;
-}
-
-* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -31,7 +28,6 @@ body {
 
 .lhs-wrapper {
     flex: 0 1 min(48rem, 35%);
-    background-color: rgb(206, 215, 224);
     background-image: url(./img/ocean.jpg);
     background-origin: border-box;
     background-size: cover;
@@ -76,7 +72,7 @@ img {
 .login-wrapper {
     margin-left: auto;
     margin-right: auto;
-    max-width: min(100%, 100ch);
+    width: min(100%, 100ch);
     padding-right: 6ch;
     padding-left: 6ch;
 }
@@ -86,11 +82,11 @@ img {
     margin-bottom: 3rem;
 }
 
-.heading :first-child {
-    margin-bottom: 1.5rem;
+.heading h2 + h2 {
+    margin-top: 1.5rem;
 }
 
-.input-wrapper {
+.form-control-wrapper {
     display: flex;
     flex-wrap: wrap;
     column-gap: 12%;
@@ -98,38 +94,24 @@ img {
     width: min(100%, 100ch);
 }
 
-.input-wrapper > * {
+.form-control-wrapper > * {
     flex: 1 1 25ch;
 }
 
-label {
-    display: block;
-}
-
-.sign-up-card h3 + p{
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.sign-up-wrapper {
+.sign-up-card {
     background-color: #ffffff;
-    padding: 1.5rem 0 2.5rem;
-    margin-bottom: 2rem;
-    width: min(100%, 100ch);
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
     border-radius: 0.5rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-form {
-    margin-bottom: 2rem;
+.sign-up-card > *:not(:first-child){
+    margin-top: 1rem;
 }
 
-input, button {
-    font-family: inherit;
-    font-size: 100%;
-    appearance: none;
+label {
+    display: block;
 }
 
 input {
@@ -141,6 +123,29 @@ input {
     outline: none;
 }
 
+input, button {
+    font-family: inherit;
+    font-size: 100%;
+    appearance: none;
+}
+
+input:user-invalid {
+    color: red;
+    /* border: 1px solid red; */
+}
+
+input:focus {
+    color: unset;
+    border: 1px solid #6c9cf9;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.password-help {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
 button {
     font-size: 1.2rem;
     font-weight: bold;
@@ -150,7 +155,8 @@ button {
     border-radius: 0.5rem;
     padding: 10px 40px;
     cursor: pointer;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-top: 2rem;
 }
 
 button:hover {
@@ -161,6 +167,9 @@ button:active {
     background-color: #407FC7;
 }
 
+.login-wrapper {
+    margin-top: 2rem;
+}
 a {
     font-weight: bold;
     text-decoration: none;
@@ -168,14 +177,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-input:user-invalid {
-    color: red;
-    /* border: 1px solid red; */
-}
-
-input:focus {
-    color: unset;
-    border: 1px solid #676767;
 }
